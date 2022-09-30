@@ -14,7 +14,7 @@
 //!
 //! More examples can be found in the [examples/](https://github.com/saber-hq/anchor-gen/tree/master/examples) directory.
 
-use anchor_idl::GeneratorOptions;
+use anchor_idl_tulip::GeneratorOptions;
 use syn::{parse_macro_input, LitStr};
 
 /// Generates an Anchor CPI crate from a JSON file.
