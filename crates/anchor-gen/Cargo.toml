@@ -1,6 +1,6 @@
 [package]
 name = "anchor-gen-tulip"
-version = "0.4.0"
+version = "0.4.1"
 edition = "2021"
 description = "Generates an Anchor CPI crate from a JSON IDL."
 authors = ["Ian Macalinao <ian@saber.so>"]
@@ -20,5 +20,5 @@ compat-program-result = [
 ]
 
 [dependencies]
-anchor-generate-cpi-crate-tulip = { version = "0.4.0", path = "../anchor-generate-cpi-crate" }
-anchor-generate-cpi-interface-tulip = { version = "0.4.0", path = "../anchor-generate-cpi-interface" }
+anchor-generate-cpi-crate-tulip = { version = "0.4.1", path = "../anchor-generate-cpi-crate" }
+anchor-generate-cpi-interface-tulip = { version = "0.4.1", path = "../anchor-generate-cpi-interface" }

@@ -142,7 +142,7 @@ dependencies = [
 
 [[package]]
 name = "anchor-gen-tulip"
-version = "0.4.0"
+version = "0.4.1"
 dependencies = [
  "anchor-generate-cpi-crate-tulip",
  "anchor-generate-cpi-interface-tulip",
@@ -150,7 +150,7 @@ dependencies = [
 
 [[package]]
 name = "anchor-generate-cpi-crate-tulip"
-version = "0.4.0"
+version = "0.4.1"
 dependencies = [
  "anchor-idl-tulip",
  "anchor-lang",
@@ -159,7 +159,7 @@ dependencies = [
 
 [[package]]
 name = "anchor-generate-cpi-interface-tulip"
-version = "0.4.0"
+version = "0.4.1"
 dependencies = [
  "anchor-idl-tulip",
  "anchor-lang",
@@ -169,7 +169,7 @@ dependencies = [
 
 [[package]]
 name = "anchor-idl-tulip"
-version = "0.4.0"
+version = "0.4.1"
 dependencies = [
  "anchor-lang",
  "anchor-syn",

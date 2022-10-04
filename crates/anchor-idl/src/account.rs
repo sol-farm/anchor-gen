@@ -14,16 +14,16 @@ pub fn generate_account_fields(
         .map(|account| match account {
             anchor_syn::idl::IdlAccountItem::IdlAccount(info) => {
                 let acc_name = format_ident!("{}", info.name.to_snake_case());
-                let annotation = if info.is_mut {
-                    quote! { #[account(mut)] }
+                // we do not use the `Signer` type here, because that can cause issues with account 
+                // deserialization and pdas
+                let annotation = if info.is_mut && info.is_signer {
+                    quote! { #[account[mut, signer]] }
+                } else if !info.is_mut && info.is_signer {
+                    quote! { #[account(signer)] }
                 } else {
                     quote! {}
                 };
-                let ty = if info.is_signer {
-                    quote! { Signer<'info> }
-                } else {
-                    quote! { AccountInfo<'info> }
-                };
+                let ty = quote! { AccountInfo<'info> };
                 quote! {
                    #annotation
                    pub #acc_name: #ty
